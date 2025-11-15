@@ -5,9 +5,10 @@ public class equality {
     public static void main(String []args)
     {
         Scanner scanner=new Scanner(System.in);
+
+
         int size1= scanner.nextInt();
         System.out.println("Enter size1:"+size1);
-
         int[] a1=new int[size1];
         for(int i=0;i<size1;i++)
         {
@@ -22,9 +23,19 @@ public class equality {
         {
             a2[i]=scanner.nextInt();
         }
-        boolean status= Arrays.equals(a1,a2);
-        if(status==true)
+        boolean status= true;
+        if(a1.length==a2.length)
         {
+            for(int i=0;i<a1.length;i++)
+            {
+                if(a1[i]!=a2[i])
+                {
+                    status=false;
+                }
+                else {
+                    status=false;
+                }
+            }
             System.out.println("Arrays are equal");
         }
         else
